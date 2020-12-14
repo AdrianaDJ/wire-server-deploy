@@ -40,6 +40,7 @@ brig:
       teamCreatorWelcome: https://teams.example.com/login # change this
       teamMemberWelcome: https://wire.example.com/download # change this
     optSettings:
+      setFederationDomain: example.com # change this
     emailSMS:
       general:
         emailSender: email@example.com # change this
@@ -60,10 +61,10 @@ proxy:
 #  image:
 #    tag: some-tag (only override if you want a newer/different version than what is in the chart)
 #  config:
-#    proxy: 
+#    proxy:
 #      httpProxy: "http://proxy.example.com"
 #      httpsProxy: "https://proxy.example.com"
-#      noProxyList: 
+#      noProxyList:
 #        - "local.example.com"
 #        - "10.23.0.0/16"
 
@@ -85,10 +86,10 @@ cargohold:
       s3Bucket: dummy-bucket
       s3Endpoint: http://fake-aws-s3:9000
       s3DownloadEndpoint: https://assets.example.com
-#    proxy: 
+#    proxy:
 #      httpProxy: "http://proxy.example.com"
 #      httpsProxy: "https://proxy.example.com"
-#      noProxyList: 
+#      noProxyList:
 #        - "local.example.com"
 #        - "10.23.0.0/16"
 
@@ -101,14 +102,15 @@ galley:
       host: cassandra-ephemeral
       replicaCount: 1
     settings:
+      federationDomain: example.com # change this
       # prefix URI used when inviting users to a conversation by link
       conversationCodeURI: https://example.com/join/ # change this
     aws:
       region: "eu-west-1"
-#    proxy: 
+#    proxy:
 #      httpProxy: "http://proxy.example.com"
 #      httpsProxy: "https://proxy.example.com"
-#      noProxyList: 
+#      noProxyList:
 #        - "local.example.com"
 #        - "10.23.0.0/16"
 
@@ -128,10 +130,10 @@ gundeck:
       queueName: integration-gundeck-events
       sqsEndpoint: http://fake-aws-sqs:4568
       snsEndpoint: http://fake-aws-sns:4575
-#    proxy: 
+#    proxy:
 #      httpProxy: "http://proxy.example.com"
 #      httpsProxy: "https://proxy.example.com"
-#      noProxyList: 
+#      noProxyList:
 #        - "local.example.com"
 #        - "10.23.0.0/16"
 
